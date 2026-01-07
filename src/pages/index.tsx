@@ -5,6 +5,7 @@ import SectionTitle from "@/@modules/section-overview/SectionTitle";
 import StatusBar from "@/@modules/section-overview/StatusBar";
 import GeometricPattern from "@/@shared/components/GeometricPattern";
 import Button from "@/@shared/ui/Button";
+import Container from "@/@shared/ui/Container";
 import { ArrowRight } from "lucide-react";
 
 export default function Home() {
@@ -12,7 +13,7 @@ export default function Home() {
     <div className="min-h-screen bg-slate-50 p-8 relative overflow-hidden">
       <GeometricPattern />
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <Container>
         <div className="mb-16">
           <div className="inline-block bg-slate-900 text-slate-50 px-6 py-2 font-black tracking-widest text-xs mb-6 transform -skew-x-12">
             <span className="inline-block transform skew-x-12">
@@ -43,7 +44,7 @@ export default function Home() {
             />
           </div>
         </div>
-      </div>
+      </Container>
     </div>
   );
 }
