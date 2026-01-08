@@ -98,28 +98,4 @@ export default function DeepDive() {
   );
 }
 
-const data = {
-  insightBlocks: [
-    {
-      title: "Implementation Velocity",
-      description: "Key initiatives are 4-6 weeks behind planned milestones",
-      value: 42,
-      trend: "down",
-    },
-    {
-      title: "Resource Allocation",
-      description: "70% of strategic budget deployed to tactical firefighting",
-      value: 70,
-      trend: "down",
-    },
-    {
-      title: "Cross-functional Alignment",
-      description: "Leadership consensus on priorities remains fragmented",
-      value: 38,
-      trend: "stable",
-    },
-  ],
-  chart: [65, 62, 58, 54, 52, 54, 51, 48],
-} as const;
-
 const colors = ["bg-rose-400", "bg-amber-300", "bg-emerald-300"];
