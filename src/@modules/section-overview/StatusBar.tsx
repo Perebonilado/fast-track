@@ -1,7 +1,9 @@
 import React, { FC } from "react";
 
+export type Stat = "critical" | "average" | "strong";
+
 export interface IStatus {
-  status: 'critical' | 'average' | 'strong';
+  status: Stat;
 }
 
 const StatusBar: FC<IStatus> = ({ status }) => {

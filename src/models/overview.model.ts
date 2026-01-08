@@ -1,7 +1,7 @@
-import { IStatus } from "@/@modules/section-overview/StatusBar";
+import { Stat } from "@/@modules/section-overview/StatusBar";
 
 export interface OverviewModel {
-  status: IStatus;
+  status: Stat;
   currentIndex: number;
   benchmark: {
     diff: number;
