@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 
-interface IStatus {
+export interface IStatus {
   status: 'critical' | 'average' | 'strong';
 }
 

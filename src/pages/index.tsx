@@ -48,3 +48,13 @@ export default function Home() {
     </div>
   );
 }
+
+const overview = {
+  status: "average",
+  currentIndex: 40,
+  benchmark: {
+    diff: 34,
+    metric: "Below Benchmark",
+  },
+  score: 50,
+};

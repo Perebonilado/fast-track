@@ -88,6 +88,7 @@ const data = {
       trend: "stable",
     },
   ],
+  chart: [65, 62, 58, 54, 52, 54, 51, 48],
 } as const;
 
 const colors = ["bg-rose-400", "bg-amber-300", "bg-emerald-300"];

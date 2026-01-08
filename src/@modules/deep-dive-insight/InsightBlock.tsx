@@ -3,7 +3,7 @@ import { Triangle, Circle, Square, Hexagon } from "lucide-react";
 
 export const shapes = [Triangle, Circle, Square, Hexagon];
 
-type Trend = "up" | "down" | "stable";
+export type Trend = "up" | "down" | "stable";
 
 interface InsightBlockProps {
   title: string;
