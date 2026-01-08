@@ -23,33 +23,42 @@ const InsightBlock: FC<InsightBlockProps> = ({
   Icon,
   rotate = "right",
 }) => {
-  const outerRotate = rotate === "right" ? "rotate-1" : "-rotate-1";
-  const innerRotate = rotate === "right" ? "-rotate-1" : "rotate-1";
+  const outerRotate = rotate === "right" ? "md:rotate-1" : "md:-rotate-1";
+  const innerRotate = rotate === "right" ? "md:-rotate-1" : "md:rotate-1";
 
   return (
     <div
-      className={`${bgColor} border-8 border-slate-900 p-8 shadow-[12px_12px_0_0_rgba(15,23,42,1)] transform ${outerRotate}`}
+      className={`${bgColor} border-4 md:border-8 border-slate-900 p-4 sm:p-6 md:p-8 shadow-[8px_8px_0_0_rgba(15,23,42,1)] md:shadow-[12px_12px_0_0_rgba(15,23,42,1)] transform ${outerRotate}`}
     >
       <div className={`transform ${innerRotate}`}>
-        <div className="flex items-start justify-between gap-6 mb-6">
-          <div className="flex items-center gap-4">
-            <Icon className="fill-slate-900 shrink-0" size={40} />
-            <h3 className="text-3xl font-black text-slate-900 uppercase">
+        {/* Header - Stacks on mobile */}
+        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 sm:gap-6 mb-4 sm:mb-6">
+          <div className="flex items-center gap-3 sm:gap-4 flex-1 min-w-0">
+            <Icon className="fill-slate-900 shrink-0" size={32} />
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-slate-900 uppercase leading-tight break-words">
               {title}
             </h3>
           </div>
 
-          <div className="bg-slate-900 text-slate-50 px-6 py-3 border-4 border-slate-900 shrink-0">
-            <div className="text-4xl font-black">{value}%</div>
+          {/* Value badge */}
+          <div className="bg-slate-900 text-slate-50 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 border-3 sm:border-4 border-slate-900 shrink-0 self-start">
+            <div className="text-2xl sm:text-3xl md:text-4xl font-black whitespace-nowrap">
+              {value}%
+            </div>
           </div>
         </div>
 
-        <p className="text-slate-900 font-bold text-xl mb-6 leading-relaxed">
+        {/* Description */}
+        <p className="text-slate-900 font-bold text-base sm:text-lg md:text-xl mb-4 sm:mb-5 md:mb-6 leading-relaxed">
           {description}
         </p>
 
-        <div className="h-8 bg-slate-50 border-4 border-slate-900">
-          <div className="h-full bg-slate-900" style={{ width: `${value}%` }} />
+        {/* Progress bar */}
+        <div className="h-6 sm:h-7 md:h-8 bg-slate-50 border-3 sm:border-4 border-slate-900 overflow-hidden">
+          <div 
+            className="h-full bg-slate-900 transition-all duration-500 ease-out" 
+            style={{ width: `${value}%` }} 
+          />
         </div>
       </div>
     </div>
