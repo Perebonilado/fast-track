@@ -6,7 +6,7 @@ interface ISectionTitle {
 
 const SectionTitle: FC<ISectionTitle> = ({ title }) => {
   return (
-    <h1 className="text-8xl md:text-9xl font-black leading-none mb-8 transform -skew-y-1">
+    <h1 className="sm:text-8xl text-6xl md:text-9xl font-black leading-none mb-8 transform -skew-y-1">
       {title.split(" ").map((word, i) => (
         <div
           key={i}
