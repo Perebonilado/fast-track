@@ -24,10 +24,9 @@ const InsightChart: React.FC<IChartProps> = ({
   startLabel = "WEEK 1",
   endLabel = "CURRENT",
   className = "",
-  accentColor = "#4f46e5", // indigo-600
-  baseColor = "#0f172a", // slate-900
+  accentColor = "#4f46e5", 
+  baseColor = "#0f172a", 
 }) => {
-  // Transform data for Recharts
   const chartData = data.map((value, index) => ({
     name: `W${index + 1}`,
     value: value,
