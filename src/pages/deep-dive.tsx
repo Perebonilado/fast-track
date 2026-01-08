@@ -21,9 +21,9 @@ export default function DeepDive() {
 
   useLoadingSuccessAndError({
     error: error,
-    errorMessage: "Something went wrong while fetching overview",
+    errorMessage: "Something went wrong while fetching insights",
     loading: isLoading,
-    loadingMessage: "Fetching Overview",
+    loadingMessage: "Fetching Insights",
     isSuccess,
   });
 
